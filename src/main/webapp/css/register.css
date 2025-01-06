@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: pink; /* Background color */
+    background-image: linear-gradient(
+        0deg, transparent 24%, #ffffff 25%, #ffffff 26%, transparent 27%, transparent 74%, #ffffff 75%, #ffffff 76%, transparent 77%, transparent), linear-gradient(
+        90deg, transparent 24%, #ffffff 25%, #ffffff 26%, transparent 27%, transparent 74%, #ffffff 75%, #ffffff 76%, transparent 77%, transparent);
+    background-size: 2rem 2rem;
+    animation: slide 4s linear infinite;
+}
+
+/* Keyframes for background animation */
+@keyframes slide {
+    to {
+        background-position: 60px 0, 60px 0, 90px 30px, 90px 30px;
+    }
+}
+
+/* Form Container Styles */
+form {
+    background-color: #fff; /* White background */
+    padding: 2rem; /* Padding around the form */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    max-width: 400px; /* Maximum width for the form */
+    width: 100%; /* Full width within the max-width */
+    transition: transform 0.3s; /* Smooth transition for scaling effect */
+}
+
+form:hover {
+    transform: scale(1.05); /* Scale the form by 1.05 times on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Dark grey text color */
+    margin-bottom: 1rem; /* Space below the header */
+}
+
+/* Label and Input Styles */
+label {
+    display: block;
+    margin-bottom: 0.5rem; /* Space below labels */
+    color: #333; /* Dark grey text color */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: calc(100% - 2rem); /* Full width minus padding */
+    padding: 0.5rem; /* Padding inside the input fields */
+    margin-bottom: 1rem; /* Space below input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Padding inside the button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    font-size: 1rem; /* Larger text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+input[type="submit"]:hover {
+    background-color: black; /* Change background color on hover */
+}

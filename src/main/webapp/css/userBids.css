@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f4f7; /* Light background color */
+}
+
+/* Header Styles */
+h1 {
+    color: #333; /* Dark grey text color */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* List Container Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 80%; /* Keep the list within 80% of the viewport width */
+    max-width: 800px; /* Maximum width for the list */
+    margin-bottom: 30px;
+}
+
+/* List Item Styles */
+li {
+    background-color: #fff; /* White background for list items */
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+li:hover {
+    transform: scale(1.02); /* Slightly enlarge the item on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Link Styles */
+li a {
+    color: #007bff; /* Blue text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block; /* Make the link block-level for better padding and spacing */
+    margin-bottom: 10px;
+    transition: color 0.2s; /* Smooth transition for color change */
+}
+
+li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Paragraph Styles */
+li p {
+    color: #555; /* Medium grey text color */
+    margin: 5px 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    ul {
+        width: 95%; /* Increase width to 95% for small screens */
+    }
+
+    li {
+        padding: 15px; /* Decrease padding for small screens */
+    }
+
+    li a {
+        font-size: 1.1em; /* Slightly smaller font size for links */
+    }
+
+    li p {
+        font-size: 0.9em; /* Slightly smaller font size for paragraphs */
+    }
+}

@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f4f7; /* Light background color */
+}
+
+/* Header Styles */
+h1, h2, h3 {
+    color: #333; /* Dark grey text color */
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Paragraph Styles */
+p {
+    color: #555; /* Medium grey text color */
+    margin: 5px 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff; /* White background */
+    padding: 1rem 2rem; /* Padding around the form */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    max-width: 400px; /* Maximum width for the form */
+    width: 100%; /* Full width within the max-width */
+    transition: transform 0.3s; /* Smooth transition for scaling effect */
+    margin-bottom: 20px;
+}
+
+form:hover {
+    transform: scale(1.05); /* Scale the form by 1.05 times on hover */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem; /* Space below labels */
+    color: #333; /* Dark grey text color */
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+textarea {
+    width: calc(100% - 2rem); /* Full width minus padding */
+    padding: 0.5rem; /* Padding inside the input fields */
+    margin-bottom: 1rem; /* Space below input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Padding inside the button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    font-size: 1rem; /* Larger text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+input[type="submit"]:hover {
+    background-color: black; /* Change background color on hover */
+}
+
+/* List Container Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 80%; /* Keep the list within 80% of the viewport width */
+    max-width: 800px; /* Maximum width for the list */
+    margin-bottom: 30px;
+}
+
+/* List Item Styles */
+li {
+    background-color: #fff; /* White background for list items */
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+li:hover {
+    transform: scale(1.02); /* Slightly enlarge the item on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Link Styles */
+li a {
+    color: #007bff; /* Blue text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block; /* Make the link block-level for better padding and spacing */
+    margin-bottom: 10px;
+    transition: color 0.2s; /* Smooth transition for color change */
+}
+
+li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    ul {
+        width: 95%; /* Increase width to 95% for small screens */
+    }
+
+    li {
+        padding: 15px; /* Decrease padding for small screens */
+    }
+
+    li a {
+        font-size: 1.1em; /* Slightly smaller font size for links */
+    }
+
+    li p {
+        font-size: 0.9em; /* Slightly smaller font size for paragraphs */
+    }
+}
