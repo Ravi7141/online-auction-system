@@ -1,93 +1,104 @@
-/*body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* ========================================
+   Global/Common Styles
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffcc00 100%);
+    --secondary-gradient: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+    --accent-orange: #ff6b35;
+    --accent-cyan: #00d9ff;
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a3e;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --blur-amount: 20px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Outfit', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    margin-bottom: 20px;
+body {
+    font-family: var(--font-primary);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
-nav {
-    background-color: #444;
-    overflow: hidden;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-form input[type="text"], form input[type="number"], form textarea {
+/* Animated Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 20% 20%, rgba(255, 107, 53, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(0, 217, 255, 0.08) 0%, transparent 50%);
+    z-index: -1;
 }
 
-form input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
 }
 
-form input[type="submit"]:hover {
-    background-color: #555;
+h1 {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: color var(--transition-fast);
 }
 
-ul li {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+a:hover {
+    color: var(--accent-orange);
 }
 
-ul li p {
-    margin: 5px 0;
-}*/
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-orange);
+}
+
+::selection {
+    background: var(--accent-orange);
+    color: white;
+}
